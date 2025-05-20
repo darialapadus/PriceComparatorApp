@@ -1,5 +1,6 @@
 package com.market.pricecomparator.controller;
 
+import com.market.pricecomparator.dto.PricePointDTO;
 import com.market.pricecomparator.model.Product;
 import com.market.pricecomparator.service.CsvProductService;
 import org.springframework.web.bind.annotation.*;
@@ -33,4 +34,25 @@ public class ProductController {
                         .get())
                 .toList();
     }
+
+    @GetMapping("/history/{productId}")
+    public Map<String, List<PricePointDTO>> getPriceHistoryByProduct(
+            @PathVariable String productId,
+            @RequestParam(required = false) String store,
+            @RequestParam(required = false) String category,
+            @RequestParam(required = false) String brand
+    ) {
+        List<Product> all = csvProductService.loadAllHistoricalProducts();
+
+        return all.stream()
+                .filter(p -> p.getProductId().equalsIgnoreCase(productId))
+                .filter(p -> store == null || p.getStore().equalsIgnoreCase(store))
+                .filter(p -> category == null || p.getProductCategory().equalsIgnoreCase(category))
+                .filter(p -> brand == null || p.getBrand().equalsIgnoreCase(brand))
+                .collect(Collectors.groupingBy(
+                        Product::getStore,
+                        Collectors.mapping(p -> new PricePointDTO(p.getDate(), p.getPrice()), Collectors.toList())
+                ));
+    }
+
 }

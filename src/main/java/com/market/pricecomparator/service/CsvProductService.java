@@ -42,4 +42,18 @@ public class CsvProductService {
 
         return products;
     }
+
+    public List<Product> loadAllHistoricalProducts() {
+        List<Product> products = new ArrayList<>();
+
+        products.addAll(loadStandardProductsFromCsv("lidl_2025-05-01.csv", "Lidl"));
+        products.addAll(loadStandardProductsFromCsv("lidl_2025-05-08.csv", "Lidl"));
+        products.addAll(loadStandardProductsFromCsv("profi_2025-05-01.csv", "Profi"));
+        products.addAll(loadStandardProductsFromCsv("profi_2025-05-08.csv", "Profi"));
+        products.addAll(loadStandardProductsFromCsv("kaufland_2025-05-01.csv", "Kaufland"));
+        products.addAll(loadStandardProductsFromCsv("kaufland_2025-05-08.csv", "Kaufland"));
+
+        return products;
+    }
+
 }
