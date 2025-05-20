@@ -1,5 +1,6 @@
 package com.market.pricecomparator.controller;
 
+import com.market.pricecomparator.dto.PriceAlertRequest;
 import com.market.pricecomparator.dto.PricePointDTO;
 import com.market.pricecomparator.model.Product;
 import com.market.pricecomparator.service.CsvProductService;
@@ -53,6 +54,17 @@ public class ProductController {
                         Product::getStore,
                         Collectors.mapping(p -> new PricePointDTO(p.getDate(), p.getPrice()), Collectors.toList())
                 ));
+    }
+
+    @PostMapping("/alert")
+    public List<Product> checkPriceAlert(@RequestBody PriceAlertRequest request) {
+        List<Product> all = csvProductService.loadAllHistoricalProducts();
+
+        return all.stream()
+                .filter(p -> p.getProductId().equalsIgnoreCase(request.getProductId()))
+                .filter(p -> request.getStore() == null || p.getStore().equalsIgnoreCase(request.getStore()))
+                .filter(p -> p.getPrice() <= request.getTargetPrice())
+                .toList();
     }
 
 }
