@@ -4,34 +4,35 @@ import com.market.pricecomparator.model.Product;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
-import java.nio.file.*;
 import java.util.*;
 
 @Service
 public class CsvProductService {
 
-    public List<Product> loadProductsFromCsv(String fileName) {
+    public List<Product> loadStandardProductsFromCsv(String fileName, String store) {
         List<Product> products = new ArrayList<>();
-        try (InputStream is = getClass().getClassLoader().getResourceAsStream(fileName)) {
-            if (is == null) {
-                throw new FileNotFoundException("File not found in resources: " + fileName);
-            }
+
+        try (InputStream is = getClass().getClassLoader().getResourceAsStream("data/" + fileName)) {
+            if (is == null) throw new FileNotFoundException("CSV file not found: " + fileName);
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-            String line;
-            reader.readLine(); // skip header
+            reader.readLine();
 
+            String line;
             while ((line = reader.readLine()) != null) {
-                String[] tokens = line.split(",");
-                if (tokens.length >= 6) {
-                    Product p = new Product(
-                            tokens[0],
-                            Double.parseDouble(tokens[1]),
-                            tokens[2],
-                            tokens[3],
-                            Double.parseDouble(tokens[4]),
-                            tokens[5]
-                    );
+                String[] tokens = line.split(";");
+                if (tokens.length >= 8) {
+                    Product p = new Product();
+                    p.setProductId(tokens[0]);
+                    p.setProductName(tokens[1]);
+                    p.setProductCategory(tokens[2]);
+                    p.setBrand(tokens[3]);
+                    p.setPackageQuantity(Double.parseDouble(tokens[4]));
+                    p.setPackageUnit(tokens[5]);
+                    p.setPrice(Double.parseDouble(tokens[6]));
+                    p.setCurrency(tokens[7]);
+                    p.setStore(store);
+                    p.setDate(fileName);
                     products.add(p);
                 }
             }
@@ -41,5 +42,4 @@ public class CsvProductService {
 
         return products;
     }
-
 }
