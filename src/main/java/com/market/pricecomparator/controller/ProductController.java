@@ -1,7 +1,9 @@
 package com.market.pricecomparator.controller;
 
+import com.market.pricecomparator.dto.BasketItemDTO;
 import com.market.pricecomparator.dto.PriceAlertRequest;
 import com.market.pricecomparator.dto.PricePointDTO;
+import com.market.pricecomparator.dto.ShoppingBasketRequest;
 import com.market.pricecomparator.model.Product;
 import com.market.pricecomparator.service.CsvProductService;
 import org.springframework.web.bind.annotation.*;
@@ -64,6 +66,28 @@ public class ProductController {
                 .filter(p -> p.getProductId().equalsIgnoreCase(request.getProductId()))
                 .filter(p -> request.getStore() == null || p.getStore().equalsIgnoreCase(request.getStore()))
                 .filter(p -> p.getPrice() <= request.getTargetPrice())
+                .toList();
+    }
+
+    @PostMapping("/basket/optimize")
+    public List<BasketItemDTO> optimizeBasket(@RequestBody ShoppingBasketRequest request) {
+        List<Product> all = csvProductService.loadAllHistoricalProducts();
+
+        return request.getProductIds().stream()
+                .map(productId -> all.stream()
+                        .filter(p -> p.getProductId().equalsIgnoreCase(productId))
+                        .min(Comparator.comparingDouble(Product::getPrice))
+                        .map(p -> new BasketItemDTO(
+                                p.getProductId(),
+                                p.getProductName(),
+                                p.getStore(),
+                                p.getPrice(),
+                                p.getPackageUnit(),
+                                p.getPackageQuantity()
+                        ))
+                        .orElse(null)
+                )
+                .filter(Objects::nonNull)
                 .toList();
     }
 
