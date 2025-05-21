@@ -31,4 +31,23 @@ class CsvProductServiceTest {
         assertNotNull(products);
         assertTrue(products.isEmpty());
     }
+
+    @Test
+    void testLoadAllHistoricalProducts_shouldLoadAllDatesAndStores() {
+        List<Product> products = service.loadAllHistoricalProducts();
+
+        assertNotNull(products);
+        assertFalse(products.isEmpty());
+
+        boolean hasLidl = products.stream().anyMatch(p -> "Lidl".equals(p.getStore()));
+        boolean hasKaufland = products.stream().anyMatch(p -> "Kaufland".equals(p.getStore()));
+        boolean hasAltex = products.stream().anyMatch(p -> "Altex".equals(p.getStore()));
+        boolean hasEmag = products.stream().anyMatch(p -> "eMAG".equals(p.getStore()));
+
+        assertTrue(hasLidl);
+        assertTrue(hasKaufland);
+        assertTrue(hasAltex);
+        assertTrue(hasEmag);
+    }
+
 }
