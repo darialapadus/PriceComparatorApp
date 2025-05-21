@@ -13,16 +13,9 @@ A Spring Boot application that compares product prices across multiple Romanian 
 
 This application was generated using [Spring Initializr](https://start.spring.io/).
 
-- **Spring Boot Version:** 3.4.5  
-- **Language:** Java 21  
-- **Packaging:** Jar  
-- **Dependencies:**  
-  - Spring Web  
-  - Spring Boot DevTools  
-  - Spring Configuration Processor  
-  - Lombok  
-  - Spring Data JPA
+Spring Initializr configuration:
 
+![Spring Initializr](docs/spring_initializr.png)
 ---
 
 ## Project Structure
@@ -172,5 +165,26 @@ Includes:
 - Unit tests for services
 - Integration tests for all major endpoints (`/alert`, `/basket/optimize`, `/discounts/top`, etc.)
 
+### Code Coverage
+
+The test suite achieves **97% instruction coverage** as shown below:
+
+| Before Improving Tests | After Improving Tests |
+|------------------------|------------------------|
+| ![](docs/jacoco_before.png) | ![](docs/jacoco_after.png) 
+
 ---
+
+## How to Generate Coverage Reports
+
+```bash
+mvn clean test
+mvn jacoco:report
+```
+
+Then open the generated HTML report at:
+
+```html
+target/site/jacoco/index.html
+```
 
