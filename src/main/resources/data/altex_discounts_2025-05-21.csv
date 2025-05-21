@@ -1,0 +1,31 @@
+product_id;product_name;brand;package_quantity;package_unit;product_category;from_date;to_date;percentage;store
+A001;Samsung Galaxy A54;Samsung;1;buc;Telefoane, Tablete;2025-05-21;2025-05-31;10.0;Altex
+A002;iPhone 13;iPhone;1;buc;Telefoane, Tablete;2025-05-21;2025-05-31;10.0;Altex
+A003;Huawei MatePad;Huawei;1;buc;Telefoane, Tablete;2025-05-21;2025-05-31;10.0;Altex
+A004;Laptop ASUS i7;Laptop;1;buc;Laptop, Desktop, IT, Birotica;2025-05-21;2025-05-31;10.0;Altex
+A005;Desktop HP Ryzen;Desktop;1;buc;Laptop, Desktop, IT, Birotica;2025-05-21;2025-05-31;10.0;Altex
+A006;"Monitor Dell 27""";Monitor;1;buc;Laptop, Desktop, IT, Birotica;2025-05-21;2025-05-31;10.0;Altex
+A007;Consola PS5;Consola;1;buc;Gaming, Jocuri, Carti;2025-05-21;2025-05-31;10.0;Altex
+A008;Volan Logitech G29;Volan;1;buc;Gaming, Jocuri, Carti;2025-05-21;2025-05-31;10.0;Altex
+A009;Minecraft PC;Minecraft;1;buc;Gaming, Jocuri, Carti;2025-05-21;2025-05-31;10.0;Altex
+A010;"Televizor LG 55""";Televizor;1;buc;TV, Audio-Video, Foto;2025-05-21;2025-05-31;10.0;Altex
+A011;Soundbar JBL;Soundbar;1;buc;TV, Audio-Video, Foto;2025-05-21;2025-05-31;10.0;Altex
+A012;Aparat Foto Canon;Aparat;1;buc;TV, Audio-Video, Foto;2025-05-21;2025-05-31;10.0;Altex
+A013;Masina spalat Samsung;Masina;1;buc;Electrocasnice mari;2025-05-21;2025-05-31;10.0;Altex
+A014;Frigider Arctic;Frigider;1;buc;Electrocasnice mari;2025-05-21;2025-05-31;10.0;Altex
+A015;Plita Electrica Whirlpool;Plita;1;buc;Electrocasnice mari;2025-05-21;2025-05-31;10.0;Altex
+A016;Cuptor microunde Beko;Cuptor;1;buc;Electrocasnice mici, Vesela;2025-05-21;2025-05-31;10.0;Altex
+A017;Mixer Bosch;Mixer;1;buc;Electrocasnice mici, Vesela;2025-05-21;2025-05-31;10.0;Altex
+A018;Fier calcat Tefal;Fier;1;buc;Electrocasnice mici, Vesela;2025-05-21;2025-05-31;10.0;Altex
+A019;Aer conditionat Heinner;Aer;1;buc;Racire, Purificare aer, Incalzire;2025-05-21;2025-05-31;10.0;Altex
+A020;Purificator aer Xiaomi;Purificator;1;buc;Racire, Purificare aer, Incalzire;2025-05-21;2025-05-31;10.0;Altex
+A021;Radiator electric Tesy;Radiator;1;buc;Racire, Purificare aer, Incalzire;2025-05-21;2025-05-31;10.0;Altex
+A022;Aspirator robot Xiaomi;Aspirator;1;buc;Curatenie, Intretinere casa;2025-05-21;2025-05-31;10.0;Altex
+A023;Mop rotativ Vileda;Mop;1;buc;Curatenie, Intretinere casa;2025-05-21;2025-05-31;10.0;Altex
+A024;Detergent multifunctional;Detergent;1;buc;Curatenie, Intretinere casa;2025-05-21;2025-05-31;10.0;Altex
+A025;Espressor DeLonghi;Espressor;1;buc;Bauturi, Cafea, Petshop;2025-05-21;2025-05-31;10.0;Altex
+A026;Pachet cafea Lavazza;Pachet;1;buc;Bauturi, Cafea, Petshop;2025-05-21;2025-05-31;10.0;Altex
+A027;Hrana pisici Whiskas;Hrana;1;buc;Bauturi, Cafea, Petshop;2025-05-21;2025-05-31;10.0;Altex
+A028;Trotineta electrica Xiaomi;Trotineta;1;buc;Trotinete, Biciclete, Sport, Voiaj;2025-05-21;2025-05-31;10.0;Altex
+A029;Bicicleta MTB Devron;Bicicleta;1;buc;Trotinete, Biciclete, Sport, Voiaj;2025-05-21;2025-05-31;10.0;Altex
+A030;Rucsac trekking 35L;Rucsac;1;buc;Trotinete, Biciclete, Sport, Voiaj;2025-05-21;2025-05-31;10.0;Altex

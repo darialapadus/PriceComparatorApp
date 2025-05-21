@@ -50,6 +50,9 @@ public class CsvDiscountService {
         all.addAll(loadDiscountsFromCsv("profi_discounts_2025-05-08.csv", "Profi"));
         all.addAll(loadDiscountsFromCsv("kaufland_discounts_2025-05-08.csv", "Kaufland"));
 
+        all.addAll(loadDiscountsFromCsv("altex_discounts_2025-05-21.csv", "Altex"));
+        all.addAll(loadDiscountsFromCsv("emag_discounts_2025-05-21.csv", "eMAG"));
+
         return all.stream()
                 .sorted((a, b) -> Double.compare(b.getPercentage(), a.getPercentage()))
                 .limit(limit)
@@ -67,6 +70,13 @@ public class CsvDiscountService {
         newDiscounts.addAll(loadDiscountsFromCsv("lidl_discounts_2025-05-08.csv", "Lidl"));
         newDiscounts.addAll(loadDiscountsFromCsv("profi_discounts_2025-05-08.csv", "Profi"));
         newDiscounts.addAll(loadDiscountsFromCsv("kaufland_discounts_2025-05-08.csv", "Kaufland"));
+
+        oldDiscounts.addAll(loadDiscountsFromCsv("altex_discounts_2025-05-01.csv", "Altex"));
+        oldDiscounts.addAll(loadDiscountsFromCsv("emag_discounts_2025-05-01.csv", "eMAG"));
+
+        newDiscounts.addAll(loadDiscountsFromCsv("altex_discounts_2025-05-21.csv", "Altex"));
+        newDiscounts.addAll(loadDiscountsFromCsv("emag_discounts_2025-05-21.csv", "eMAG"));
+
 
         Set<String> oldKeys = oldDiscounts.stream()
                 .map(d -> d.getProductId() + "_" + d.getStore())

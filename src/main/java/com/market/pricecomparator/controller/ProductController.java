@@ -29,6 +29,9 @@ public class ProductController {
         all.addAll(csvProductService.loadStandardProductsFromCsv("profi_2025-05-08.csv", "Profi"));
         all.addAll(csvProductService.loadStandardProductsFromCsv("kaufland_2025-05-08.csv", "Kaufland"));
 
+        all.addAll(csvProductService.loadStandardProductsFromCsv("altex_2025-05-21.csv", "Altex"));
+        all.addAll(csvProductService.loadStandardProductsFromCsv("emag_2025-05-21.csv", "eMAG"));
+
         return all.stream()
                 .collect(Collectors.groupingBy(Product::getProductId))
                 .values().stream()

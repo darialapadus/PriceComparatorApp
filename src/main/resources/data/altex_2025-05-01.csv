@@ -1,0 +1,31 @@
+product_id;product_name;product_category;brand;package_quantity;package_unit;price;currency
+A001;Samsung Galaxy A54;Telefoane, Tablete;Samsung;1;buc;495.19;RON
+A002;iPhone 13;Telefoane, Tablete;iPhone;1;buc;497.88;RON
+A003;Huawei MatePad;Telefoane, Tablete;Huawei;1;buc;500.57;RON
+A004;Laptop ASUS i7;Laptop, Desktop, IT, Birotica;Laptop;1;buc;503.26;RON
+A005;Desktop HP Ryzen;Laptop, Desktop, IT, Birotica;Desktop;1;buc;505.95;RON
+A006;"Monitor Dell 27""";Laptop, Desktop, IT, Birotica;Monitor;1;buc;508.63;RON
+A007;Consola PS5;Gaming, Jocuri, Carti;Consola;1;buc;511.32;RON
+A008;Volan Logitech G29;Gaming, Jocuri, Carti;Volan;1;buc;514.01;RON
+A009;Minecraft PC;Gaming, Jocuri, Carti;Minecraft;1;buc;516.7;RON
+A010;"Televizor LG 55""";TV, Audio-Video, Foto;Televizor;1;buc;519.39;RON
+A011;Soundbar JBL;TV, Audio-Video, Foto;Soundbar;1;buc;522.08;RON
+A012;Aparat Foto Canon;TV, Audio-Video, Foto;Aparat;1;buc;524.77;RON
+A013;Masina spalat Samsung;Electrocasnice mari;Masina;1;buc;527.46;RON
+A014;Frigider Arctic;Electrocasnice mari;Frigider;1;buc;530.15;RON
+A015;Plita Electrica Whirlpool;Electrocasnice mari;Plita;1;buc;532.84;RON
+A016;Cuptor microunde Beko;Electrocasnice mici, Vesela;Cuptor;1;buc;535.52;RON
+A017;Mixer Bosch;Electrocasnice mici, Vesela;Mixer;1;buc;538.21;RON
+A018;Fier calcat Tefal;Electrocasnice mici, Vesela;Fier;1;buc;540.9;RON
+A019;Aer conditionat Heinner;Racire, Purificare aer, Incalzire;Aer;1;buc;543.59;RON
+A020;Purificator aer Xiaomi;Racire, Purificare aer, Incalzire;Purificator;1;buc;546.28;RON
+A021;Radiator electric Tesy;Racire, Purificare aer, Incalzire;Radiator;1;buc;548.97;RON
+A022;Aspirator robot Xiaomi;Curatenie, Intretinere casa;Aspirator;1;buc;551.66;RON
+A023;Mop rotativ Vileda;Curatenie, Intretinere casa;Mop;1;buc;554.35;RON
+A024;Detergent multifunctional;Curatenie, Intretinere casa;Detergent;1;buc;557.04;RON
+A025;Espressor DeLonghi;Bauturi, Cafea, Petshop;Espressor;1;buc;559.73;RON
+A026;Pachet cafea Lavazza;Bauturi, Cafea, Petshop;Pachet;1;buc;562.42;RON
+A027;Hrana pisici Whiskas;Bauturi, Cafea, Petshop;Hrana;1;buc;565.1;RON
+A028;Trotineta electrica Xiaomi;Trotinete, Biciclete, Sport, Voiaj;Trotineta;1;buc;567.79;RON
+A029;Bicicleta MTB Devron;Trotinete, Biciclete, Sport, Voiaj;Bicicleta;1;buc;570.48;RON
+A030;Rucsac trekking 35L;Trotinete, Biciclete, Sport, Voiaj;Rucsac;1;buc;573.17;RON

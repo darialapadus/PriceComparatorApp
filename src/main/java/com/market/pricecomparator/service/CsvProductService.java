@@ -8,12 +8,14 @@ import java.util.*;
 
 @Service
 public class CsvProductService {
-
     public List<Product> loadStandardProductsFromCsv(String fileName, String store) {
         List<Product> products = new ArrayList<>();
 
         try (InputStream is = getClass().getClassLoader().getResourceAsStream("data/" + fileName)) {
-            if (is == null) throw new FileNotFoundException("CSV file not found: " + fileName);
+            if (is == null) {
+                System.err.println("CSV file not found: " + fileName);
+                return products;
+            }
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
             reader.readLine();
@@ -52,6 +54,13 @@ public class CsvProductService {
         products.addAll(loadStandardProductsFromCsv("profi_2025-05-08.csv", "Profi"));
         products.addAll(loadStandardProductsFromCsv("kaufland_2025-05-01.csv", "Kaufland"));
         products.addAll(loadStandardProductsFromCsv("kaufland_2025-05-08.csv", "Kaufland"));
+
+        products.addAll(loadStandardProductsFromCsv("altex_2025-05-21.csv", "Altex"));
+        products.addAll(loadStandardProductsFromCsv("altex_2025-05-01.csv", "Altex"));
+
+        products.addAll(loadStandardProductsFromCsv("emag_2025-05-21.csv", "eMAG"));
+        products.addAll(loadStandardProductsFromCsv("emag_2025-05-01.csv", "eMAG"));
+
 
         return products;
     }
