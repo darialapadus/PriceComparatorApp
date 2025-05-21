@@ -188,3 +188,13 @@ Then open the generated HTML report at:
 target/site/jacoco/index.html
 ```
 
+---
+
+## 📹 Video Demonstration
+
+A short demo showing:
+- Functional API endpoints (Postman)
+- Architecture explanation (Controllers, Services, DTOs, CSV)
+- Test strategy and code coverage
+
+▶️ [Watch the demo video](https://youtu.be/B88_YSaRvLg)
